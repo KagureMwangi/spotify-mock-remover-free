@@ -56,24 +56,24 @@ export function Player({ currentSong, isPlaying, setIsPlaying }: PlayerProps) {
 
   if (!currentSong) {
     return (
-      <div className="h-20 bg-black border-t border-gray-800 flex items-center justify-center">
+      <div className="h-20 bg-gradient-to-t from-black/70 to-black border-t border-gray-900 flex items-center justify-center px-4">
         <p className="text-gray-400">Select a song to start playing</p>
       </div>
     );
   }
 
   return (
-    <div className="h-20 bg-black border-t border-gray-800 flex items-center justify-between px-4">
+    <div className="h-20 bg-gradient-to-t from-black/70 to-black border-t border-gray-900 flex items-center justify-between px-8 sm:px-12">
       {/* Current Song Info */}
-      <div className="flex items-center space-x-3 w-1/4">
+      <div className="flex items-center space-x-3 w-1/4 min-w-0">
         <img
           src={currentSong.cover}
           alt={currentSong.title}
-          className="w-14 h-14 rounded-lg object-cover"
+          className="w-12 h-12 rounded-lg object-cover"
         />
         <div className="min-w-0">
-          <h4 className="text-white font-semibold truncate">{currentSong.title}</h4>
-          <p className="text-gray-400 text-sm truncate">{currentSong.artist}</p>
+          <h4 className="text-white font-semibold truncate text-base">{currentSong.title}</h4>
+          <p className="text-gray-400 text-xs truncate">{currentSong.artist}</p>
         </div>
         <Button size="sm" variant="ghost" className="text-gray-400 hover:text-white">
           <Heart className="w-4 h-4" />
@@ -81,12 +81,12 @@ export function Player({ currentSong, isPlaying, setIsPlaying }: PlayerProps) {
       </div>
 
       {/* Player Controls */}
-      <div className="flex flex-col items-center w-1/2 max-w-2xl">
-        <div className="flex items-center space-x-4 mb-2">
-          <Button size="sm" variant="ghost" className="text-gray-400 hover:text-white">
+      <div className="flex flex-col items-center w-2/4 max-w-2xl">
+        <div className="flex items-center space-x-3 mb-1">
+          <Button size="icon" variant="ghost" className="text-gray-400 hover:text-white">
             <Shuffle className="w-4 h-4" />
           </Button>
-          <Button size="sm" variant="ghost" className="text-gray-400 hover:text-white">
+          <Button size="icon" variant="ghost" className="text-gray-400 hover:text-white">
             <SkipBack className="w-5 h-5" />
           </Button>
           <Button
@@ -99,16 +99,16 @@ export function Player({ currentSong, isPlaying, setIsPlaying }: PlayerProps) {
               <Play className="w-4 h-4 fill-black" />
             )}
           </Button>
-          <Button size="sm" variant="ghost" className="text-gray-400 hover:text-white">
+          <Button size="icon" variant="ghost" className="text-gray-400 hover:text-white">
             <SkipForward className="w-5 h-5" />
           </Button>
-          <Button size="sm" variant="ghost" className="text-gray-400 hover:text-white">
+          <Button size="icon" variant="ghost" className="text-gray-400 hover:text-white">
             <Repeat className="w-4 h-4" />
           </Button>
         </div>
         
         <div className="flex items-center space-x-2 w-full">
-          <span className="text-xs text-gray-400 w-10 text-right">
+          <span className="text-xs text-gray-400 w-10 text-right hidden sm:block">
             {formatTime(currentTime)}
           </span>
           <Slider
@@ -118,21 +118,21 @@ export function Player({ currentSong, isPlaying, setIsPlaying }: PlayerProps) {
             step={1}
             className="flex-1"
           />
-          <span className="text-xs text-gray-400 w-10">
+          <span className="text-xs text-gray-400 w-10 hidden sm:block">
             {formatTime(duration)}
           </span>
         </div>
       </div>
 
       {/* Volume Control */}
-      <div className="flex items-center space-x-2 w-1/4 justify-end">
+      <div className="flex items-center space-x-2 w-1/4 min-w-0 justify-end">
         <Volume2 className="w-4 h-4 text-gray-400" />
         <Slider
           value={volume}
           onValueChange={setVolume}
           max={100}
           step={1}
-          className="w-24"
+          className="w-20"
         />
       </div>
     </div>

@@ -16,46 +16,47 @@ const playlists = [
 
 export function Sidebar() {
   return (
-    <div className="w-64 bg-black flex flex-col h-full border-r border-gray-800">
-      <div className="p-6">
-        <h1 className="text-2xl font-bold text-white mb-6">Spotify</h1>
-        
-        <nav className="space-y-2">
-          <Button variant="ghost" className="w-full justify-start text-white hover:text-white hover:bg-gray-800">
-            <Home className="mr-3 h-5 w-5" />
+    <div className="w-60 bg-sidebar flex flex-col h-full border-r border-sidebar-border">
+      <div className="px-4 pt-4 pb-2">
+        <h1 className="text-2xl font-bold text-white mb-6 font-[PlayfairDisplay] tracking-tighter lowercase" style={{letterSpacing: '-1.5px'}}>
+          vibes
+        </h1>
+        <nav className="space-y-1">
+          <Button variant="ghost" className="w-full justify-start text-white hover:bg-sidebar-accent/60">
+            <Home className="mr-2 h-5 w-5" />
             Home
           </Button>
-          <Button variant="ghost" className="w-full justify-start text-gray-400 hover:text-white hover:bg-gray-800">
-            <Search className="mr-3 h-5 w-5" />
+          <Button variant="ghost" className="w-full justify-start text-gray-400 hover:text-white hover:bg-sidebar-accent/60">
+            <Search className="mr-2 h-5 w-5" />
             Search
           </Button>
-          <Button variant="ghost" className="w-full justify-start text-gray-400 hover:text-white hover:bg-gray-800">
-            <Library className="mr-3 h-5 w-5" />
+          <Button variant="ghost" className="w-full justify-start text-gray-400 hover:text-white hover:bg-sidebar-accent/60">
+            <Library className="mr-2 h-5 w-5" />
             Your Library
           </Button>
         </nav>
       </div>
 
-      <div className="px-6 py-4">
-        <Button variant="ghost" className="w-full justify-start text-gray-400 hover:text-white hover:bg-gray-800 mb-2">
-          <Plus className="mr-3 h-4 w-4" />
+      <div className="px-4 pb-2 flex flex-col gap-1">
+        <Button variant="ghost" className="justify-start text-gray-400 hover:text-white hover:bg-sidebar-accent/60 text-sm">
+          <Plus className="mr-2 h-4 w-4" />
           Create Playlist
         </Button>
-        <Button variant="ghost" className="w-full justify-start text-gray-400 hover:text-white hover:bg-gray-800">
-          <Heart className="mr-3 h-4 w-4" />
+        <Button variant="ghost" className="justify-start text-gray-400 hover:text-white hover:bg-sidebar-accent/60 text-sm">
+          <Heart className="mr-2 h-4 w-4" />
           Liked Songs
         </Button>
       </div>
 
-      <div className="flex-1 px-6">
-        <div className="border-t border-gray-800 pt-4">
+      <div className="flex-1 px-3 mt-3">
+        <div className="border-t border-sidebar-border pt-3">
           <ScrollArea className="h-full">
             <div className="space-y-1">
               {playlists.map((playlist, index) => (
                 <Button
                   key={index}
                   variant="ghost"
-                  className="w-full justify-start text-gray-400 hover:text-white hover:bg-gray-800 text-sm"
+                  className="w-full justify-start text-gray-400 hover:text-white hover:bg-sidebar-accent/50 text-xs font-medium px-2 py-1 rounded-lg"
                 >
                   {playlist}
                 </Button>
