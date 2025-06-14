@@ -55,11 +55,7 @@ export function Player({ currentSong, isPlaying, setIsPlaying }: PlayerProps) {
   };
 
   if (!currentSong) {
-    return (
-      <div className="h-20 bg-gradient-to-t from-black/70 to-black border-t border-gray-900 flex items-center justify-center px-4">
-        <p className="text-gray-400">Select a song to start playing</p>
-      </div>
-    );
+    return null;
   }
 
   return (
