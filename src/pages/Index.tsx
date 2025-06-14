@@ -5,7 +5,6 @@ import { MainContent } from "@/components/MainContent";
 import { Player } from "@/components/Player";
 import { SidebarProvider, SidebarInset, SidebarTrigger } from "@/components/ui/sidebar";
 import { Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const [currentSong, setCurrentSong] = useState(null);
@@ -18,14 +17,8 @@ const Index = () => {
           <AppSidebar />
           <SidebarInset className="flex flex-col flex-1 overflow-hidden">
             <div className="md:hidden p-4 border-b border-white/10 dark:border-white/10 light:border-orange-200/30">
-              <SidebarTrigger asChild>
-                <Button 
-                  variant="ghost" 
-                  size="icon"
-                  className="text-white/70 hover:text-white hover:bg-white/10 transition-all"
-                >
-                  <Menu className="h-5 w-5" />
-                </Button>
+              <SidebarTrigger className="text-white/70 hover:text-white hover:bg-white/10 transition-all">
+                <Menu className="h-5 w-5" />
               </SidebarTrigger>
             </div>
             <div className="flex-1 overflow-hidden">
