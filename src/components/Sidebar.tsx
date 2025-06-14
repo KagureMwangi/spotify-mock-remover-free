@@ -2,6 +2,7 @@
 import { Home, Search, Library, Plus, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const playlists = [
   "Liked Songs",
@@ -16,21 +17,24 @@ const playlists = [
 
 export function Sidebar() {
   return (
-    <div className="w-60 bg-sidebar flex flex-col h-full border-r border-sidebar-border">
+    <div className="w-60 bg-black/20 dark:bg-black/40 light:bg-white/20 backdrop-blur-xl flex flex-col h-full border-r border-white/10 dark:border-white/10 light:border-orange-200/30">
       <div className="px-4 pt-4 pb-2">
-        <h1 className="text-2xl font-bold text-white mb-6 font-[PlayfairDisplay] tracking-tighter lowercase" style={{letterSpacing: '-1.5px'}}>
-          vibes
-        </h1>
+        <div className="flex items-center justify-between mb-6">
+          <h1 className="text-2xl font-bold gradient-text font-[PlayfairDisplay] tracking-tighter lowercase" style={{letterSpacing: '-1.5px'}}>
+            vibes
+          </h1>
+          <ThemeToggle />
+        </div>
         <nav className="space-y-1">
-          <Button variant="ghost" className="w-full justify-start text-white hover:bg-sidebar-accent/60">
+          <Button variant="ghost" className="w-full justify-start text-white dark:text-white light:text-gray-700 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50">
             <Home className="mr-2 h-5 w-5" />
             Home
           </Button>
-          <Button variant="ghost" className="w-full justify-start text-gray-400 hover:text-white hover:bg-sidebar-accent/60">
+          <Button variant="ghost" className="w-full justify-start text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50">
             <Search className="mr-2 h-5 w-5" />
             Search
           </Button>
-          <Button variant="ghost" className="w-full justify-start text-gray-400 hover:text-white hover:bg-sidebar-accent/60">
+          <Button variant="ghost" className="w-full justify-start text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50">
             <Library className="mr-2 h-5 w-5" />
             Your Library
           </Button>
@@ -38,25 +42,25 @@ export function Sidebar() {
       </div>
 
       <div className="px-4 pb-2 flex flex-col gap-1">
-        <Button variant="ghost" className="justify-start text-gray-400 hover:text-white hover:bg-sidebar-accent/60 text-sm">
+        <Button variant="ghost" className="justify-start text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50 text-sm">
           <Plus className="mr-2 h-4 w-4" />
           Create Playlist
         </Button>
-        <Button variant="ghost" className="justify-start text-gray-400 hover:text-white hover:bg-sidebar-accent/60 text-sm">
+        <Button variant="ghost" className="justify-start text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50 text-sm">
           <Heart className="mr-2 h-4 w-4" />
           Liked Songs
         </Button>
       </div>
 
       <div className="flex-1 px-3 mt-3">
-        <div className="border-t border-sidebar-border pt-3">
+        <div className="border-t border-white/10 dark:border-white/10 light:border-orange-200/30 pt-3">
           <ScrollArea className="h-full">
             <div className="space-y-1">
               {playlists.map((playlist, index) => (
                 <Button
                   key={index}
                   variant="ghost"
-                  className="w-full justify-start text-gray-400 hover:text-white hover:bg-sidebar-accent/50 text-xs font-medium px-2 py-1 rounded-lg"
+                  className="w-full justify-start text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50 text-xs font-medium px-2 py-1 rounded-lg"
                 >
                   {playlist}
                 </Button>

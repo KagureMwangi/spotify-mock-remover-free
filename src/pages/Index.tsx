@@ -10,7 +10,7 @@ const Index = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 dark:from-black dark:via-purple-950 dark:to-black light:from-orange-50 light:via-purple-50 light:to-orange-50 text-white dark:text-white light:text-gray-900 flex flex-col">
       <SidebarProvider>
         <div className="flex flex-1 overflow-hidden">
           <Sidebar />
