@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Play, Pause, SkipBack, SkipForward, Shuffle, Repeat, Volume2, Heart } from "lucide-react";
+import { Play, Pause, SkipBack, SkipForward, Shuffle, Repeat, Volume2, Heart, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 
@@ -59,7 +59,17 @@ export function Player({ currentSong, isPlaying, setIsPlaying }: PlayerProps) {
   }
 
   return (
-    <div className="h-20 bg-gradient-to-t from-black/70 to-black border-t border-gray-900 flex items-center justify-between px-8 sm:px-12">
+    <div className="fixed bottom-0 left-0 right-0 z-50 h-20 bg-gradient-to-t from-black/90 to-black border-t border-gray-900 flex items-center justify-between px-8 sm:px-12">
+      {/* Navigation Arrows */}
+      <div className="flex items-center space-x-2">
+        <Button size="icon" variant="ghost" className="text-gray-400 hover:text-white">
+          <ChevronLeft className="w-5 h-5" />
+        </Button>
+        <Button size="icon" variant="ghost" className="text-gray-400 hover:text-white">
+          <ChevronRight className="w-5 h-5" />
+        </Button>
+      </div>
+
       {/* Current Song Info */}
       <div className="flex items-center space-x-3 w-1/4 min-w-0">
         <img

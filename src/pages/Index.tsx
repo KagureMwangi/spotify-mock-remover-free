@@ -21,11 +21,13 @@ const Index = () => {
             isPlaying={isPlaying}
           />
         </div>
-        <Player 
-          currentSong={currentSong}
-          isPlaying={isPlaying}
-          setIsPlaying={setIsPlaying}
-        />
+        {currentSong && (
+          <Player 
+            currentSong={currentSong}
+            isPlaying={isPlaying}
+            setIsPlaying={setIsPlaying}
+          />
+        )}
       </SidebarProvider>
     </div>
   );
