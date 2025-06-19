@@ -43,19 +43,19 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu className="space-y-1">
               <SidebarMenuItem>
-                <SidebarMenuButton className="w-full justify-start text-white dark:text-white light:text-gray-700 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50">
+                <SidebarMenuButton className="w-full justify-start text-white dark:text-white light:text-gray-900 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50">
                   <Home className="mr-2 h-5 w-5" />
                   <span>Home</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton className="w-full justify-start text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50">
+                <SidebarMenuButton className="w-full justify-start text-gray-300 dark:text-gray-400 light:text-gray-700 hover:text-white dark:hover:text-white light:hover:text-gray-900 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50">
                   <Search className="mr-2 h-5 w-5" />
                   <span>Search</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton className="w-full justify-start text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50">
+                <SidebarMenuButton className="w-full justify-start text-gray-300 dark:text-gray-400 light:text-gray-700 hover:text-white dark:hover:text-white light:hover:text-gray-900 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50">
                   <Library className="mr-2 h-5 w-5" />
                   <span>Your Library</span>
                 </SidebarMenuButton>
@@ -68,13 +68,13 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu className="flex flex-col gap-1">
               <SidebarMenuItem>
-                <SidebarMenuButton className="justify-start text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50 text-sm">
+                <SidebarMenuButton className="justify-start text-gray-300 dark:text-gray-400 light:text-gray-700 hover:text-white dark:hover:text-white light:hover:text-gray-900 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50 text-sm">
                   <Plus className="mr-2 h-4 w-4" />
                   <span>Create Playlist</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton className="justify-start text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50 text-sm">
+                <SidebarMenuButton className="justify-start text-gray-300 dark:text-gray-400 light:text-gray-700 hover:text-white dark:hover:text-white light:hover:text-gray-900 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50 text-sm">
                   <Heart className="mr-2 h-4 w-4" />
                   <span>Liked Songs</span>
                 </SidebarMenuButton>
@@ -90,7 +90,7 @@ export function AppSidebar() {
             <SidebarMenu className="space-y-1">
               {playlists.map((playlist, index) => (
                 <SidebarMenuItem key={index}>
-                  <SidebarMenuButton className="w-full justify-start text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50 text-xs font-medium px-2 py-1 rounded-lg">
+                  <SidebarMenuButton className="w-full justify-start text-gray-300 dark:text-gray-400 light:text-gray-700 hover:text-white dark:hover:text-white light:hover:text-gray-900 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-orange-100/50 text-xs font-medium px-2 py-1 rounded-lg">
                     {playlist}
                   </SidebarMenuButton>
                 </SidebarMenuItem>

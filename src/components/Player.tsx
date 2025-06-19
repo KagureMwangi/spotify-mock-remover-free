@@ -62,10 +62,10 @@ export function Player({ currentSong, isPlaying, setIsPlaying }: PlayerProps) {
     <div className="fixed bottom-0 left-0 right-0 z-50 h-20 bg-black/40 dark:bg-black/60 light:bg-white/40 backdrop-blur-xl border-t border-white/20 dark:border-white/10 light:border-orange-200/50 flex items-center justify-between px-8 sm:px-12">
       {/* Navigation Arrows */}
       <div className="flex items-center space-x-2">
-        <Button size="icon" variant="ghost" className="text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800">
+        <Button size="icon" variant="ghost" className="text-gray-300 dark:text-gray-400 light:text-gray-700 hover:text-white dark:hover:text-white light:hover:text-gray-900">
           <ChevronLeft className="w-5 h-5" />
         </Button>
-        <Button size="icon" variant="ghost" className="text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800">
+        <Button size="icon" variant="ghost" className="text-gray-300 dark:text-gray-400 light:text-gray-700 hover:text-white dark:hover:text-white light:hover:text-gray-900">
           <ChevronRight className="w-5 h-5" />
         </Button>
       </div>
@@ -78,10 +78,10 @@ export function Player({ currentSong, isPlaying, setIsPlaying }: PlayerProps) {
           className="w-12 h-12 rounded-lg object-cover"
         />
         <div className="min-w-0">
-          <h4 className="text-white dark:text-white light:text-gray-800 font-semibold truncate text-base">{currentSong.title}</h4>
-          <p className="text-gray-300 dark:text-gray-400 light:text-gray-600 text-xs truncate">{currentSong.artist}</p>
+          <h4 className="text-white dark:text-white light:text-gray-900 font-semibold truncate text-base">{currentSong.title}</h4>
+          <p className="text-gray-300 dark:text-gray-400 light:text-gray-700 text-xs truncate">{currentSong.artist}</p>
         </div>
-        <Button size="sm" variant="ghost" className="text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800">
+        <Button size="sm" variant="ghost" className="text-gray-300 dark:text-gray-400 light:text-gray-700 hover:text-white dark:hover:text-white light:hover:text-gray-900">
           <Heart className="w-4 h-4" />
         </Button>
       </div>
@@ -89,10 +89,10 @@ export function Player({ currentSong, isPlaying, setIsPlaying }: PlayerProps) {
       {/* Player Controls */}
       <div className="flex flex-col items-center w-2/4 max-w-2xl">
         <div className="flex items-center space-x-3 mb-1">
-          <Button size="icon" variant="ghost" className="text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800">
+          <Button size="icon" variant="ghost" className="text-gray-300 dark:text-gray-400 light:text-gray-700 hover:text-white dark:hover:text-white light:hover:text-gray-900">
             <Shuffle className="w-4 h-4" />
           </Button>
-          <Button size="icon" variant="ghost" className="text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800">
+          <Button size="icon" variant="ghost" className="text-gray-300 dark:text-gray-400 light:text-gray-700 hover:text-white dark:hover:text-white light:hover:text-gray-900">
             <SkipBack className="w-5 h-5" />
           </Button>
           <Button
@@ -105,16 +105,16 @@ export function Player({ currentSong, isPlaying, setIsPlaying }: PlayerProps) {
               <Play className="w-4 h-4 fill-white" />
             )}
           </Button>
-          <Button size="icon" variant="ghost" className="text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800">
+          <Button size="icon" variant="ghost" className="text-gray-300 dark:text-gray-400 light:text-gray-700 hover:text-white dark:hover:text-white light:hover:text-gray-900">
             <SkipForward className="w-5 h-5" />
           </Button>
-          <Button size="icon" variant="ghost" className="text-gray-300 dark:text-gray-400 light:text-gray-600 hover:text-white dark:hover:text-white light:hover:text-gray-800">
+          <Button size="icon" variant="ghost" className="text-gray-300 dark:text-gray-400 light:text-gray-700 hover:text-white dark:hover:text-white light:hover:text-gray-900">
             <Repeat className="w-4 h-4" />
           </Button>
         </div>
         
         <div className="flex items-center space-x-2 w-full">
-          <span className="text-xs text-gray-300 dark:text-gray-400 light:text-gray-600 w-10 text-right hidden sm:block">
+          <span className="text-xs text-gray-300 dark:text-gray-400 light:text-gray-700 w-10 text-right hidden sm:block">
             {formatTime(currentTime)}
           </span>
           <Slider
@@ -124,7 +124,7 @@ export function Player({ currentSong, isPlaying, setIsPlaying }: PlayerProps) {
             step={1}
             className="flex-1"
           />
-          <span className="text-xs text-gray-300 dark:text-gray-400 light:text-gray-600 w-10 hidden sm:block">
+          <span className="text-xs text-gray-300 dark:text-gray-400 light:text-gray-700 w-10 hidden sm:block">
             {formatTime(duration)}
           </span>
         </div>
@@ -132,7 +132,7 @@ export function Player({ currentSong, isPlaying, setIsPlaying }: PlayerProps) {
 
       {/* Volume Control */}
       <div className="flex items-center space-x-2 w-1/4 min-w-0 justify-end">
-        <Volume2 className="w-4 h-4 text-gray-300 dark:text-gray-400 light:text-gray-600" />
+        <Volume2 className="w-4 h-4 text-gray-300 dark:text-gray-400 light:text-gray-700" />
         <Slider
           value={volume}
           onValueChange={setVolume}

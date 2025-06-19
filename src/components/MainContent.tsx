@@ -48,8 +48,8 @@ export function MainContent({ setCurrentSong, setIsPlaying, currentSong, isPlayi
                   className="w-14 h-14 rounded-md object-cover mr-4"
                 />
                 <div className="flex-1">
-                  <h3 className="font-semibold text-white dark:text-white light:text-gray-800 text-base truncate">{playlist.name}</h3>
-                  <p className="text-gray-300 dark:text-gray-400 light:text-gray-600 text-xs truncate">{playlist.description}</p>
+                  <h3 className="font-semibold text-white dark:text-white light:text-gray-900 text-base truncate">{playlist.name}</h3>
+                  <p className="text-gray-300 dark:text-gray-400 light:text-gray-700 text-xs truncate">{playlist.description}</p>
                 </div>
                 <Button
                   size="sm"
@@ -63,7 +63,7 @@ export function MainContent({ setCurrentSong, setIsPlaying, currentSong, isPlayi
 
           {/* Recently Played */}
           <section className="mb-10">
-            <h2 className="text-xl font-semibold text-white dark:text-white light:text-gray-800 mb-3">Recently played</h2>
+            <h2 className="text-xl font-semibold text-white dark:text-white light:text-gray-900 mb-3">Recently played</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
               {mockSongs.slice(0, 10).map((song) => (
                 <div
@@ -87,8 +87,8 @@ export function MainContent({ setCurrentSong, setIsPlaying, currentSong, isPlayi
                       )}
                     </Button>
                   </div>
-                  <h3 className="font-semibold text-white dark:text-white light:text-gray-800 truncate text-base">{song.title}</h3>
-                  <p className="text-gray-300 dark:text-gray-400 light:text-gray-600 text-xs truncate">{song.artist}</p>
+                  <h3 className="font-semibold text-white dark:text-white light:text-gray-900 truncate text-base">{song.title}</h3>
+                  <p className="text-gray-300 dark:text-gray-400 light:text-gray-700 text-xs truncate">{song.artist}</p>
                 </div>
               ))}
             </div>
@@ -96,7 +96,7 @@ export function MainContent({ setCurrentSong, setIsPlaying, currentSong, isPlayi
 
           {/* Made for you */}
           <section className="mb-4">
-            <h2 className="text-xl font-semibold text-white dark:text-white light:text-gray-800 mb-3">Made for you</h2>
+            <h2 className="text-xl font-semibold text-white dark:text-white light:text-gray-900 mb-3">Made for you</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
               {mockPlaylists.slice(0, 5).map((playlist) => (
                 <div
@@ -115,8 +115,8 @@ export function MainContent({ setCurrentSong, setIsPlaying, currentSong, isPlayi
                       <Play className="w-4 h-4 text-white fill-white" />
                     </Button>
                   </div>
-                  <h3 className="font-semibold text-white dark:text-white light:text-gray-800 truncate text-base">{playlist.name}</h3>
-                  <p className="text-gray-300 dark:text-gray-400 light:text-gray-600 text-xs truncate">{playlist.description}</p>
+                  <h3 className="font-semibold text-white dark:text-white light:text-gray-900 truncate text-base">{playlist.name}</h3>
+                  <p className="text-gray-300 dark:text-gray-400 light:text-gray-700 text-xs truncate">{playlist.description}</p>
                 </div>
               ))}
             </div>

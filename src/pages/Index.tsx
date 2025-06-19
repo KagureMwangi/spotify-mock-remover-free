@@ -17,7 +17,7 @@ const Index = () => {
           <AppSidebar />
           <SidebarInset className="flex flex-col flex-1 overflow-hidden">
             <div className="md:hidden p-4 border-b border-white/10 dark:border-white/10 light:border-orange-200/30">
-              <SidebarTrigger className="text-white/70 hover:text-white hover:bg-white/10 transition-all">
+              <SidebarTrigger className="text-white/70 hover:text-white hover:bg-white/10 dark:text-white/70 dark:hover:text-white dark:hover:bg-white/10 light:text-gray-800 light:hover:text-gray-900 light:hover:bg-orange-100/50 transition-all">
                 <Menu className="h-5 w-5" />
               </SidebarTrigger>
             </div>
