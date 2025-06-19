@@ -11,7 +11,7 @@ export function ThemeToggle() {
       onClick={toggleTheme}
       size="icon"
       variant="ghost"
-      className="text-white/70 hover:text-white hover:bg-white/10 transition-all"
+      className="text-white/70 hover:text-white hover:bg-white/10 dark:text-white/70 dark:hover:text-white dark:hover:bg-white/10 light:text-gray-700 light:hover:text-gray-900 light:hover:bg-orange-100/50 transition-all"
     >
       {theme === 'dark' ? (
         <Sun className="w-5 h-5" />
